@@ -46,4 +46,17 @@ function swap(arr, index1, index2) {
 	arr[index1] = arr[index2];
 	arr[index2] = temp;
 }
-	
+
+function bubbleSort() {
+	var numElements = this.dataStore.lenght;
+	var temp;
+	for (var outer = numElements; outer >=2; --outer) {
+		for(var inner =0; inner<= outer-1; ++inner) {
+			if(this.dataStore[inner] > this.dataStore[inner+1]) {
+				swap(this.dataStore, inner, inner+1);
+			}
+		}
+	}
+}
+
+
