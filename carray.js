@@ -13,6 +13,7 @@ function CArray(numElements) {
 	}
 	this.bubbleSort = bubbleSort;
 	this.selectionSort = selectionSort;
+	this.insertionSort = insertionSort;
 }
 
 function setData() {
