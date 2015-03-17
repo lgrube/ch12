@@ -22,6 +22,13 @@ function CArray(numElements) {
 	var stop = new Date().getTime();
 	var elapsed = stop - start;
 	print("The elapsed time was: " + elapsed + " milliseconds.");
+
+	this.shellsort = shellsort;
+	this.gaps = [5,3,1];
+}
+
+function setGaps(arr) {
+	this.gaps = arr;
 }
 
 function setData() {
