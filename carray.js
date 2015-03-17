@@ -12,6 +12,7 @@ function CArray(numElements) {
 		this.dataStore[i] = i;
 	}
 	this.bubbleSort = bubbleSort;
+	this.selectionSort = selectionSort;
 }
 
 function setData() {
