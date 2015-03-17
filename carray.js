@@ -14,6 +14,14 @@ function CArray(numElements) {
 	this.bubbleSort = bubbleSort;
 	this.selectionSort = selectionSort;
 	this.insertionSort = insertionSort;
+
+	var start = new Date().getTime();
+	for (var i = 1; i < 100; ++i) {
+		print(i);
+	}
+	var stop = new Date().getTime();
+	var elapsed = stop - start;
+	print("The elapsed time was: " + elapsed + " milliseconds.");
 }
 
 function setData() {
@@ -89,5 +97,21 @@ function insertionSort() {
 		}
 	this.dataStore[inner] = temp;
 	print(this.toString());
+	}
+}
+
+function shellsort() {
+	for (var g = 0; g < this.gaps.length; ++g) {
+		for (var i = this.gaps[g]; i < this.dataStore.length; ++i) {
+			var temp = this.dataStore[i];
+			for (var j = i; j >= this.gaps[g] &&
+					this.dataStore[j-this.gaps[g]] > temp;
+			    j -= this.gaps[g]) {
+		            this.dataStore[j] = this.dataStore[j - this.gaps[g]];
+			    print(this.toString());
+			}
+		  this.dataStore[j] = temp;
+		}
+	   print(this.toString());
 	}
 }
